@@ -1,6 +1,5 @@
 import Booking from "../models/Booking.js";
 import Property from "../models/Property.js";
-import mongoose from "mongoose";
 
 // ✅ Create a new booking (auto-fetch owner)
 export const createBooking = async (req, res) => {
@@ -47,7 +46,7 @@ export const createBooking = async (req, res) => {
       checkInDate,
       checkOutDate,
       totalAmount,
-      status: "confirmed",
+      status: "pending",
       paymentStatus: "pending",
     });
 
